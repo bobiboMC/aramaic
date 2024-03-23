@@ -1,0 +1,21 @@
+<div>
+	<Header title={'מילון ארמי זוהר - עברי'} />
+	<div class="space-y-4">
+		<div class="mt-4 space-y-4">
+			<AutoCompleteInput
+				suggestions={suggestedDictionary}
+				userInput={wordToTranslate}
+				on:chosenWord={storeEvent}
+			/>
+			<button
+				on:click={findTranslation}
+				class="border-2 border-black p-2 rounded hover:bg-cyan-600"
+				type="submit">תרגם</button
+			>
+		</div>
+		<div>
+			{wordToTranslate}
+			{wordTranslation}
+		</div>
+	</div>
+</div>
